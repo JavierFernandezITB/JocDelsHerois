@@ -1,0 +1,137 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "Heroes/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Heroes.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Heroes.dll": {}
+        }
+      },
+      "Menu/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Utils": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Menu.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Menu.dll": {}
+        }
+      },
+      "Utils/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Utils.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Utils.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Heroes/1.0.0": {
+      "type": "project",
+      "path": "../Heroes/Heroes.csproj",
+      "msbuildProject": "../Heroes/Heroes.csproj"
+    },
+    "Menu/1.0.0": {
+      "type": "project",
+      "path": "../Menu/Menu.csproj",
+      "msbuildProject": "../Menu/Menu.csproj"
+    },
+    "Utils/1.0.0": {
+      "type": "project",
+      "path": "../Utils/Utils.csproj",
+      "msbuildProject": "../Utils/Utils.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "Heroes >= 1.0.0",
+      "Menu >= 1.0.0",
+      "Utils >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Javier\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\JocDelsHerois\\JocDelsHerois.csproj",
+      "projectName": "JocDelsHerois",
+      "projectPath": "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\JocDelsHerois\\JocDelsHerois.csproj",
+      "packagesPath": "C:\\Users\\Javier\\.nuget\\packages\\",
+      "outputPath": "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\JocDelsHerois\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Javier\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {
+            "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\Heroes\\Heroes.csproj": {
+              "projectPath": "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\Heroes\\Heroes.csproj"
+            },
+            "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\Menu\\Menu.csproj": {
+              "projectPath": "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\Menu\\Menu.csproj"
+            },
+            "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\Utils\\Utils.csproj": {
+              "projectPath": "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\Utils\\Utils.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
