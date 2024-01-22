@@ -4,11 +4,9 @@ D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois
 D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\JocDelsHerois\bin\Debug\net7.0\JocDelsHerois.dll
 D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\JocDelsHerois\bin\Debug\net7.0\JocDelsHerois.pdb
 D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\JocDelsHerois\bin\Debug\net7.0\Heroes.dll
-D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\JocDelsHerois\bin\Debug\net7.0\Menu.dll
 D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\JocDelsHerois\bin\Debug\net7.0\Messages.dll
 D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\JocDelsHerois\bin\Debug\net7.0\Utils.dll
 D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\JocDelsHerois\bin\Debug\net7.0\Heroes.pdb
-D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\JocDelsHerois\bin\Debug\net7.0\Menu.pdb
 D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\JocDelsHerois\bin\Debug\net7.0\Messages.pdb
 D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\JocDelsHerois\bin\Debug\net7.0\Utils.pdb
 D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\JocDelsHerois\obj\Debug\net7.0\JocDelsHerois.csproj.AssemblyReference.cache

@@ -9,7 +9,6 @@
       "JocDelsHerois/1.0.0": {
         "dependencies": {
           "Heroes": "1.0.0",
-          "Menu": "1.0.0",
           "Messages": "1.0.0",
           "Utils": "1.0.0"
         },
@@ -18,17 +17,11 @@
         }
       },
       "Heroes/1.0.0": {
-        "runtime": {
-          "Heroes.dll": {}
-        }
-      },
-      "Menu/1.0.0": {
         "dependencies": {
-          "Messages": "1.0.0",
-          "Utils": "1.0.0"
+          "Messages": "1.0.0"
         },
         "runtime": {
-          "Menu.dll": {}
+          "Heroes.dll": {}
         }
       },
       "Messages/1.0.0": {
@@ -50,11 +43,6 @@
       "sha512": ""
     },
     "Heroes/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Menu/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

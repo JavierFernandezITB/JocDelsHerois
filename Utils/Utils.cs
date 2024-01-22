@@ -6,5 +6,10 @@
         { 
             return value >= min && value <= max;
         }
+
+        public static int GenRandomNumber(int low, int high)
+        { 
+            return new Random().Next(low, high+1);
+        }
     }
 }
