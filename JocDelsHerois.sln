@@ -5,13 +5,11 @@ VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JocDelsHerois", "JocDelsHerois\JocDelsHerois.csproj", "{7950F624-03A9-4401-9C1A-5D3F77780080}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Menu", "Menu\Menu.csproj", "{F05E0D09-4160-422A-8F46-7B855DF7E3B8}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Heroes", "Heroes\Heroes.csproj", "{BC42D66F-78DC-4ECF-8996-F86B7655FD3E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utils", "Utils\Utils.csproj", "{2A9B02A5-3738-4F7E-BBCE-8EC445711913}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messages", "Messages\Messages.csproj", "{A789FF6B-464E-4448-B2F4-203AB437BCB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Messages", "Messages\Messages.csproj", "{A789FF6B-464E-4448-B2F4-203AB437BCB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{7950F624-03A9-4401-9C1A-5D3F77780080}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7950F624-03A9-4401-9C1A-5D3F77780080}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7950F624-03A9-4401-9C1A-5D3F77780080}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F05E0D09-4160-422A-8F46-7B855DF7E3B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F05E0D09-4160-422A-8F46-7B855DF7E3B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F05E0D09-4160-422A-8F46-7B855DF7E3B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F05E0D09-4160-422A-8F46-7B855DF7E3B8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BC42D66F-78DC-4ECF-8996-F86B7655FD3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BC42D66F-78DC-4ECF-8996-F86B7655FD3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC42D66F-78DC-4ECF-8996-F86B7655FD3E}.Release|Any CPU.ActiveCfg = Release|Any CPU

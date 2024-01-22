@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v7.0": {
       "Heroes/1.0.0": {
+        "dependencies": {
+          "Messages": "1.0.0"
+        },
         "runtime": {
           "Heroes.dll": {}
+        }
+      },
+      "Messages/1.0.0": {
+        "runtime": {
+          "Messages.dll": {}
         }
       }
     }
   },
   "libraries": {
     "Heroes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Messages/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

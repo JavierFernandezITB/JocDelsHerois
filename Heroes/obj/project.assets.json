@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "Messages/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Messages.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Messages.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Messages/1.0.0": {
+      "type": "project",
+      "path": "../Messages/Messages.csproj",
+      "msbuildProject": "../Messages/Messages.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "Messages >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Javier\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\Messages\\Messages.csproj": {
+              "projectPath": "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\Messages\\Messages.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
