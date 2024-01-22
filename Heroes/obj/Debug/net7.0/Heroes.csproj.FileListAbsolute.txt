@@ -1,0 +1,12 @@
+D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\Heroes\bin\Debug\net7.0\Heroes.deps.json
+D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\Heroes\bin\Debug\net7.0\Heroes.dll
+D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\Heroes\bin\Debug\net7.0\Heroes.pdb
+D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\Heroes\obj\Debug\net7.0\Heroes.csproj.AssemblyReference.cache
+D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\Heroes\obj\Debug\net7.0\Heroes.GeneratedMSBuildEditorConfig.editorconfig
+D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\Heroes\obj\Debug\net7.0\Heroes.AssemblyInfoInputs.cache
+D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\Heroes\obj\Debug\net7.0\Heroes.AssemblyInfo.cs
+D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\Heroes\obj\Debug\net7.0\Heroes.csproj.CoreCompileInputs.cache
+D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\Heroes\obj\Debug\net7.0\Heroes.dll
+D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\Heroes\obj\Debug\net7.0\refint\Heroes.dll
+D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\Heroes\obj\Debug\net7.0\Heroes.pdb
+D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\Heroes\obj\Debug\net7.0\ref\Heroes.dll

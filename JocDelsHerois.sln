@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Menu", "Menu\Menu.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Heroes", "Heroes\Heroes.csproj", "{BC42D66F-78DC-4ECF-8996-F86B7655FD3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{2A9B02A5-3738-4F7E-BBCE-8EC445711913}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utils", "Utils\Utils.csproj", "{2A9B02A5-3738-4F7E-BBCE-8EC445711913}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messages", "Messages\Messages.csproj", "{A789FF6B-464E-4448-B2F4-203AB437BCB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{2A9B02A5-3738-4F7E-BBCE-8EC445711913}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A9B02A5-3738-4F7E-BBCE-8EC445711913}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A9B02A5-3738-4F7E-BBCE-8EC445711913}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A789FF6B-464E-4448-B2F4-203AB437BCB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A789FF6B-464E-4448-B2F4-203AB437BCB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A789FF6B-464E-4448-B2F4-203AB437BCB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A789FF6B-464E-4448-B2F4-203AB437BCB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

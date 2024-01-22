@@ -1,0 +1,73 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "JocDelsHerois/1.0.0": {
+        "dependencies": {
+          "Heroes": "1.0.0",
+          "Menu": "1.0.0",
+          "Messages": "1.0.0",
+          "Utils": "1.0.0"
+        },
+        "runtime": {
+          "JocDelsHerois.dll": {}
+        }
+      },
+      "Heroes/1.0.0": {
+        "runtime": {
+          "Heroes.dll": {}
+        }
+      },
+      "Menu/1.0.0": {
+        "dependencies": {
+          "Messages": "1.0.0",
+          "Utils": "1.0.0"
+        },
+        "runtime": {
+          "Menu.dll": {}
+        }
+      },
+      "Messages/1.0.0": {
+        "runtime": {
+          "Messages.dll": {}
+        }
+      },
+      "Utils/1.0.0": {
+        "runtime": {
+          "Utils.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "JocDelsHerois/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Heroes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Menu/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Messages/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Utils/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
