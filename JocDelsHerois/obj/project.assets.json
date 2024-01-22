@@ -16,6 +16,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "Messages": "1.0.0",
           "Utils": "1.0.0"
         },
         "compile": {
@@ -23,6 +24,16 @@
         },
         "runtime": {
           "bin/placeholder/Menu.dll": {}
+        }
+      },
+      "Messages/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Messages.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Messages.dll": {}
         }
       },
       "Utils/1.0.0": {
@@ -48,6 +59,11 @@
       "path": "../Menu/Menu.csproj",
       "msbuildProject": "../Menu/Menu.csproj"
     },
+    "Messages/1.0.0": {
+      "type": "project",
+      "path": "../Messages/Messages.csproj",
+      "msbuildProject": "../Messages/Messages.csproj"
+    },
     "Utils/1.0.0": {
       "type": "project",
       "path": "../Utils/Utils.csproj",
@@ -58,6 +74,7 @@
     "net7.0": [
       "Heroes >= 1.0.0",
       "Menu >= 1.0.0",
+      "Messages >= 1.0.0",
       "Utils >= 1.0.0"
     ]
   },
@@ -98,6 +115,9 @@
             },
             "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\Menu\\Menu.csproj": {
               "projectPath": "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\Menu\\Menu.csproj"
+            },
+            "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\Messages\\Messages.csproj": {
+              "projectPath": "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\Messages\\Messages.csproj"
             },
             "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\Utils\\Utils.csproj": {
               "projectPath": "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\Utils\\Utils.csproj"
