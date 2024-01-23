@@ -6,7 +6,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Messages": "1.0.0"
+          "Messages": "1.0.0",
+          "Utils": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Heroes.dll": {}
@@ -28,6 +29,9 @@
       "Utils/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Messages": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Utils.dll": {}
         },

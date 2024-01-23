@@ -18,7 +18,8 @@
       },
       "Heroes/1.0.0": {
         "dependencies": {
-          "Messages": "1.0.0"
+          "Messages": "1.0.0",
+          "Utils": "1.0.0"
         },
         "runtime": {
           "Heroes.dll": {}
@@ -30,6 +31,9 @@
         }
       },
       "Utils/1.0.0": {
+        "dependencies": {
+          "Messages": "1.0.0"
+        },
         "runtime": {
           "Utils.dll": {}
         }

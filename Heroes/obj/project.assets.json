@@ -11,6 +11,19 @@
         "runtime": {
           "bin/placeholder/Messages.dll": {}
         }
+      },
+      "Utils/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Messages": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Utils.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Utils.dll": {}
+        }
       }
     }
   },
@@ -19,11 +32,17 @@
       "type": "project",
       "path": "../Messages/Messages.csproj",
       "msbuildProject": "../Messages/Messages.csproj"
+    },
+    "Utils/1.0.0": {
+      "type": "project",
+      "path": "../Utils/Utils.csproj",
+      "msbuildProject": "../Utils/Utils.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Messages >= 1.0.0"
+      "Messages >= 1.0.0",
+      "Utils >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -60,6 +79,9 @@
           "projectReferences": {
             "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\Messages\\Messages.csproj": {
               "projectPath": "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\Messages\\Messages.csproj"
+            },
+            "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\Utils\\Utils.csproj": {
+              "projectPath": "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\Utils\\Utils.csproj"
             }
           }
         }

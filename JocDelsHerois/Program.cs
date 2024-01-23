@@ -2,6 +2,7 @@
 using Heroes;
 using Utils;
 using Messages;
+using System.Security.Cryptography;
 
 namespace JocDelsHeroisNamespace
 {
@@ -12,12 +13,7 @@ namespace JocDelsHeroisNamespace
             string[] StatsName = { "VIDA", "DAÑO", "REDUCCIÓN DE DAÑO" };
 
             string[] CharacterNames = { "ARQUERA", "BARBARO", "MAGO", "DRUIDA", "MONSTRUO" };
-
-            string archerName;
-            string barbarianName;
-            string mageName;
-            string druidName;
-            string monsterName;
+            string[] customNames = { };
 
             int[] archerStats = { 0, 0, 0 };
             int[] barbarianStats = { 0, 0, 0 };
@@ -61,6 +57,8 @@ namespace JocDelsHeroisNamespace
             bool exitMainMenu = false;
             bool startMainGame = false;
             bool exitDifficultySelection = false;
+            bool exitNameCreation = false;
+            bool exitBattleStage = false;
 
             while (!exitMainMenu)
             {
@@ -89,6 +87,7 @@ namespace JocDelsHeroisNamespace
                 CurrentMenuTries = 0;
                 while (!exitDifficultySelection)
                 {
+                    Console.Clear();
                     Console.WriteLine(MessagesList.DifficultySelectionMessage);
                     Console.WriteLine(MessagesList.DifficultySelectionOptions);
                     choice = Convert.ToInt32(Console.ReadLine());
@@ -104,6 +103,7 @@ namespace JocDelsHeroisNamespace
                     if (CurrentMenuTries >= MaxTries)
                         Console.WriteLine(MessagesList.ErrorNoTriesLeft);
                     else
+                    {
                         switch (choice)
                         {
                             case 1:
@@ -142,7 +142,7 @@ namespace JocDelsHeroisNamespace
                                         {
                                             Console.WriteLine(MessagesList.DifficultyCustomChangeStat, StatsName[x], CharacterNames[i], characterStatsRanges[(i * 3) + x][0], characterStatsRanges[(i * 3) + x][1]);
                                             selection = Convert.ToInt32(Console.ReadLine());
-                                            if (!UtilsHandler.IsInRange(selection, characterStatsRanges[(i * 3 ) + x][0], characterStatsRanges[(i * 3) + x][1]))
+                                            if (!UtilsHandler.IsInRange(selection, characterStatsRanges[(i * 3) + x][0], characterStatsRanges[(i * 3) + x][1]))
                                                 currentStatTries++;
                                         } while (!UtilsHandler.IsInRange(selection, characterStatsRanges[(i * 3) + x][0], characterStatsRanges[(i * 3) + x][1]) && currentStatTries < MaxTries);
 
@@ -163,8 +163,193 @@ namespace JocDelsHeroisNamespace
                                 }
                                 break;
                         }
+                    }
 
                     exitDifficultySelection = true;
+                }
+
+                CurrentMenuTries = 0;
+                while (!exitNameCreation)
+                {
+                    Console.Clear();
+                    do
+                    {
+                        
+                        Console.WriteLine(MessagesList.NameSelectionPrompt);
+                        customNames = Console.ReadLine().Split(", ");
+                        if (!UtilsHandler.CheckValidNames(customNames))
+                            CurrentMenuTries++;
+                    } while (!UtilsHandler.CheckValidNames(customNames) && CurrentMenuTries < MaxTries);
+
+                    if (CurrentMenuTries >= MaxTries)
+                        Console.WriteLine(MessagesList.ErrorNoTriesLeft);
+
+                    exitNameCreation = true;
+                }
+
+                bool isKnocked = false;
+                int knockedTurns = 0;
+                int oldDefense = charactersStats[1][2];
+                int maxDefenseTurns = 0;
+
+                while (!exitBattleStage)
+                {
+                    int[] turnsDone = { -1, -1, -1, -1 };
+                    bool[] isProtected = { false, false, false, false };
+                    int turns = 0;
+                    do
+                    {
+                        Console.Clear();
+                        int randomTurn = UtilsHandler.GenRandomNumber(0, 3);
+                        int currentCharacterTries = 0;
+
+                        if (!HeroesHandler.IsDead(charactersStats, randomTurn) && !UtilsHandler.FindInArray(turnsDone, randomTurn))
+                        {
+                            HeroesHandler.DisplayFightStats(charactersStats, customNames, CharacterNames);
+                            Console.WriteLine("Turno de " + customNames[randomTurn] + " (" + CharacterNames[randomTurn] + ")");
+                            turnsDone[randomTurn] = randomTurn;
+                            turns++;
+                            do
+                            {
+                                Console.WriteLine(MessagesList.FightChoiceMessage);
+                                Console.WriteLine(MessagesList.FightChoiceOpciones);
+                                choice = Convert.ToInt32(Console.ReadLine());
+                                if (!UtilsHandler.IsInRange(choice, 1, 3))
+                                    currentCharacterTries++;
+                            } while (!UtilsHandler.IsInRange(choice, 1, 3) && currentCharacterTries < MaxTries);
+                            if (currentCharacterTries < MaxTries)
+                            {
+                                switch (choice)
+                                {
+                                    case 1:
+                                        int damage = HeroesHandler.CalcDamage(charactersStats, 4, charactersStats[randomTurn][1]);
+                                        if (!HeroesHandler.IsMissed())
+                                        {
+                                            if (HeroesHandler.IsCrit())
+                                            {
+                                                damage *= 2;
+                                                UtilsHandler.PrintColored(MessagesList.FightCritMessage, ConsoleColor.Blue);
+                                            }
+                                            charactersStats[4][0] -= damage;
+                                            Console.WriteLine(MessagesList.FightAttackMessage, damage);
+                                        }
+                                        else
+                                        {
+                                            UtilsHandler.PrintColored(MessagesList.FightMissedMessage, ConsoleColor.Red);
+                                        }
+                                        
+                                        break;
+                                    case 2:
+                                        Console.WriteLine(MessagesList.FightProtectedMessage);
+                                        isProtected[randomTurn] = true;
+                                        break;
+                                    case 3:
+                                        switch (randomTurn)
+                                        {
+                                            case 0:
+                                                isKnocked = true;
+                                                Console.WriteLine(MessagesList.ArcherSkillMessage);
+                                                break;
+                                            case 1:
+                                                charactersStats[1][2] = 100;
+                                                Console.WriteLine(MessagesList.BarbarianSkillMessage);
+                                                break;
+                                            case 2:
+                                                damage = HeroesHandler.CalcDamage(charactersStats, 4, charactersStats[randomTurn][1]);
+                                                charactersStats[4][0] -= damage * 3;
+                                                Console.WriteLine(MessagesList.MageSkillMessage, damage * 3);
+                                                break;
+                                            case 3:
+                                                Console.WriteLine(MessagesList.DruidSkillMessage);
+                                                for (int i = 0; i < 3; i++)
+                                                {
+                                                    if (charactersStats[i][0] + 500 > characterStatsRanges[i * 3][1])
+                                                    {
+                                                        charactersStats[i][0] = characterStatsRanges[i * 3][1];
+                                                    }
+                                                    else
+                                                    {
+                                                        charactersStats[i][0] += 500;
+                                                    }
+                                                }
+                                                break;
+                                        }
+                                        break;
+                                }
+                            }
+                            UtilsHandler.PressAnyKey();
+                        }
+                    } while (turns < 4);
+
+                    // Monster Turn
+
+                    Console.Clear();
+                    HeroesHandler.DisplayFightStats(charactersStats, customNames, CharacterNames);
+                    Console.WriteLine(MessagesList.FightMonsterTurnMessageMessage);
+
+                    if (!isKnocked)
+                    {
+                        for (int i = 0; i < 4; i++)
+                        {
+                            if (!HeroesHandler.IsDead(charactersStats, i))
+                            {
+                                if (!isProtected[i])
+                                {
+                                    int damage = HeroesHandler.CalcDamage(charactersStats, i, charactersStats[4][1]);
+                                    if (!HeroesHandler.IsMissed())
+                                    {
+                                        charactersStats[i][0] -= damage;
+                                        Console.WriteLine(MessagesList.FightMonsterAttacksMessage, customNames[i] + " (" + CharacterNames[i] + ")", damage);
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine(MessagesList.FightMonsterDefMissedMessage, customNames[i] + " (" + CharacterNames[i] + ")");
+                                    }
+                                }
+                                else
+                                {
+                                    Console.WriteLine(MessagesList.FightMonsterMissedMessage, customNames[i] + " (" + CharacterNames[i] + ")");
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine(MessagesList.MonsterKnockedMessage);
+                        knockedTurns++;
+                        if (knockedTurns == 2)
+                        { 
+                            knockedTurns = 0;
+                            isKnocked = false;
+                        }
+                    }
+
+                    if (charactersStats[1][2] == 100) // Si está activa.
+                    {
+                        maxDefenseTurns++;
+                        if (maxDefenseTurns == 2)
+                        {
+                            maxDefenseTurns = 0;
+                            charactersStats[1][2] = oldDefense;
+                        }
+                    }
+
+                    UtilsHandler.PressAnyKey();
+
+                    if (HeroesHandler.IsDead(charactersStats, 0) && HeroesHandler.IsDead(charactersStats, 1) && HeroesHandler.IsDead(charactersStats, 2) && HeroesHandler.IsDead(charactersStats, 3))
+                    {
+                        Console.Clear();
+                        HeroesHandler.DisplayFightStats(charactersStats, customNames, CharacterNames);
+                        exitBattleStage = true;
+                        UtilsHandler.PrintColored(MessagesList.EndingHeroDead, ConsoleColor.Red);
+                    }
+                    else if (HeroesHandler.IsDead(charactersStats, 4))
+                    {
+                        Console.Clear();
+                        HeroesHandler.DisplayFightStats(charactersStats, customNames, CharacterNames);
+                        exitBattleStage = true;
+                        UtilsHandler.PrintColored(MessagesList.EndingMonsterDead, ConsoleColor.Green);
+                    }
                 }
             }
         }

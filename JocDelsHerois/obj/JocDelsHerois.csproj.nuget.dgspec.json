@@ -34,6 +34,9 @@
             "projectReferences": {
               "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\Messages\\Messages.csproj": {
                 "projectPath": "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\Messages\\Messages.csproj"
+              },
+              "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\Utils\\Utils.csproj": {
+                "projectPath": "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\Utils\\Utils.csproj"
               }
             }
           }
@@ -222,7 +225,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\Messages\\Messages.csproj": {
+                "projectPath": "D:\\JavierF\\General\\Visual Studio\\CSharp\\DeberesClase\\JocDelsHerois\\JocDelsHerois\\Messages\\Messages.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
