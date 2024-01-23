@@ -33,7 +33,7 @@ namespace Heroes
             return UtilsHandler.GenRandomNumber(0, 100) <= missChance;
         }
 
-        public static bool DisplayFightStats(int[][] characterStats, string[] characterNames, string[] origCharacterNames)
+        public static void DisplayFightStats(int[][] characterStats, string[] characterNames, string[] origCharacterNames)
         {
             for (int i = 0; i < characterNames.Length; i++)
             {
@@ -48,7 +48,6 @@ namespace Heroes
                 UtilsHandler.PrintColored("\t Vida: " + characterStats[4][0] + "\n", ConsoleColor.Green);
             else
                 UtilsHandler.PrintColored("\t FALLECIDO\n", ConsoleColor.Red);
-            return true;
         }
     }
 }
