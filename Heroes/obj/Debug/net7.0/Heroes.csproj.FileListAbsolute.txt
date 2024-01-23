@@ -13,3 +13,5 @@ D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois
 D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\Heroes\bin\Debug\net7.0\Messages.dll
 D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\Heroes\bin\Debug\net7.0\Messages.pdb
 D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\Heroes\obj\Debug\net7.0\Heroes.csproj.CopyComplete
+D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\Heroes\bin\Debug\net7.0\Utils.dll
+D:\JavierF\General\Visual Studio\CSharp\DeberesClase\JocDelsHerois\JocDelsHerois\Heroes\bin\Debug\net7.0\Utils.pdb

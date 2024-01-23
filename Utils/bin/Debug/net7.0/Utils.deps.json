@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v7.0": {
       "Utils/1.0.0": {
+        "dependencies": {
+          "Messages": "1.0.0"
+        },
         "runtime": {
           "Utils.dll": {}
+        }
+      },
+      "Messages/1.0.0": {
+        "runtime": {
+          "Messages.dll": {}
         }
       }
     }
   },
   "libraries": {
     "Utils/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Messages/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
