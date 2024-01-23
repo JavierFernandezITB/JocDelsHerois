@@ -27,11 +27,10 @@ namespace Utils
             return true;
         }
 
-        public static bool PressAnyKey()
+        public static void PressAnyKey()
         {
             Console.WriteLine(MessagesList.PressAnyKey);
             Console.ReadKey();
-            return true;
         }
 
         public static bool FindInArray(int[] arr, int query)
